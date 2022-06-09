@@ -1,4 +1,6 @@
 # a2-g6-a2-g6
 a2-g6-a2-g6 created by GitHub Classroom
 
-Rama con modificaciones según  incisos solicitados para  examen final de Programación Web 1.
+
+Proyecto original alojado en (Ver  ramas):
+https://github.com/PPROF1-2021/a2-g6-a2-g6/tree/master
