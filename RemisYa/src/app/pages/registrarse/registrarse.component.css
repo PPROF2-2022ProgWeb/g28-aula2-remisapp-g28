@@ -1,0 +1,289 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+legend + * {
+  clear: left;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+
+.row-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.row-cols-3 > * {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.row-cols-4 > * {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.row-cols-5 > * {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.row-cols-6 > * {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+
+
+  .row-cols-sm-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-sm-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-sm-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-sm-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-sm-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-sm-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+
+  .row-cols-md-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-md-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-md-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+
+  .row-cols-lg-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-lg-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-lg-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-lg-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-lg-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-lg-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+
+  .row-cols-xl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+
+  .row-cols-xxl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xxl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xxl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xxl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xxl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xxl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xxl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 0.25rem 0.25rem;
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: 1px 0;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: var(--bs-table-striped-bg);
+  color: var(--bs-table-striped-color);
+}
+
+.table-active {
+  --bs-table-accent-bg: var(--bs-table-active-bg);
+  color: var(--bs-table-active-color);
+}
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+  color: var(--bs-table-hover-color);
+}
+
+
+.modal-footer > * {
+  margin: 0.25rem;
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+

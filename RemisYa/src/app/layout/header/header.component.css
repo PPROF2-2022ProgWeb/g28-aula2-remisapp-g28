@@ -11,6 +11,7 @@ header {
  .wave {
     position: relative;
     padding-top: 10rem;
+    background: url('/RemisYa/src/assets/wave.png');
     background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
  }
  

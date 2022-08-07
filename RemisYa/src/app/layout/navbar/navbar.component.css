@@ -1,4 +1,5 @@
 .navbar .nav-link {
+   background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
     color: white;
     margin-right: 29px;
     transition: 0.2s;

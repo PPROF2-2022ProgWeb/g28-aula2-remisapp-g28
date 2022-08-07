@@ -9,6 +9,9 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { Navbar2Component } from './layout/navbar2/navbar2.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { RegistrarseComponent } from './pages/registrarse/registrarse.component'
+import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.component'
 
 
 @NgModule({
@@ -17,6 +20,9 @@ import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.comp
     Navbar2Component,
     NavbarComponent,
     SobrenosotrosComponent,
+    RegistrarseComponent,
+    IniciarsesionComponent,
+    ContactoComponent,
     FooterComponent,
     AppComponent
   ],

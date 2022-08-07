@@ -1,7 +1,8 @@
 .services .icon-box {
     padding: 33px 25px;
     text-align: center;
-    background: #fff;
+    background: rgb(3, 214, 73); 
+   /* background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%); */
     cursor: pointer;
     transition: 0.5s;
  }
@@ -11,13 +12,13 @@
  }
  
  .services .icon-box .icon i {
-    color: #FCAB44;
+    color: #44e6fc;
     font-size: 43px;
  }
  
  .services .icon-box h4 {
     margin-bottom: 15px;
-    color: #FC562C;
+    color: #065863;
  }
  
  
