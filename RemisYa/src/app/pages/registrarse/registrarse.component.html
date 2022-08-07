@@ -1,0 +1,123 @@
+<div id="el-fomulario-de-registro" class="container">
+    <h2>Completa el formulario de registro y disfruta de nuestros servicios</h2>
+    <br>
+    <form action="action_page.php" method="post" class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">Nombre</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese su nombre" required minlength="2" maxlength="15">
+            <div class="invalid-feedback">
+              Por favor ingrese  mas de 2 caracteres.
+            </div>
+            <div class="valid-feedback">
+              Válido!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Apellido</label>
+            <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Ingrese su apellido" required minlength="2" maxlength="15">
+            <div class="invalid-feedback">
+              Por favor ingrese  mas de 2 caracteres.
+            </div>
+            <div class="valid-feedback">
+              Válido!
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Teléfono</label>
+            <input type="text" name="telefono" class="form-control" id="telefono" placeholder="Ingrese su teléfono sin espacios" required>
+            <div class="valid-feedback">
+              Válido!
+            </div>
+          </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">DNI</label>
+            <input type="text" name="dni" class="form-control" id="dni" placeholder="Ingrese su DNI sin espacios" required minlength="8" max="12">
+            <div class="invalid-feedback">
+              Por favor ingrese su DNI.
+            </div>
+          </div>
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <label for="fechaNac">Introduzca su fecha de nacimiento:</label>
+             <br>
+             <input id="fechaNac" type="date" name="edad" id="edad" >
+             <br>
+             <label for="edad">Su edad es: </label>
+            <input id="edad" type="text" size="30">
+            <br>
+          <p id="salida">
+         
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom04">Barrio</label>
+            <select class="custom-select" name="barrio" id="barrio" placeholder="Ingrese su barrio" required>
+              <option selected disabled value="">Elige...</option>
+              <option selected disabled value="">Elige...</option>
+              <option>1	Zona Central (CPC Mercado de la Ciudad)</option>
+              <option>2	Zona Norte (CPC Centro América)</option>
+              <option>3	Zona Nordeste (CPC Rancagua)</option>
+              <option>4	Zona Este (CPC Pueyrredón)</option>
+              <option>5	Zona Sudeste (CPC Empalme)</option>
+              <option>6	Zona Sur (CPC Villa El Libertador)</option>
+              <option>7	Zona Sudoeste (CPC Ruta 20)</option>
+              <option>8	Zona Oeste (CPC Colón)</option>
+              <option>9	Zona Noroeste (CPC Monseñor Pablo Cabrera)</option>
+              <option>10 Zona Cerro / Argüello (CPC Argüello)</option>
+              <option>11 Zona Guiñazú (CPC Guiñazú)</option>
+              <option>12 Otro - Especificar en "Dirección" porfavor</option>
+            </select>
+            <div class="invalid-feedback">
+              Selecciona una opción
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom05">Dirección</label>
+            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese su dirección de calle" required minlength="2" maxlength="35">
+            <div class="invalid-feedback">
+              Por favor ingrese su dirección de calle
+            </div>
+          </div>
+      <!--  </div> -->
+        <div class="form-group">
+          <div style="position: center;" class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto términos y condiciones
+            </label>
+            <div class="invalid-feedback">
+              Deberías aceptar antes de continuar
+            </div>
+          </div>
+        </div>
+       <!-- <center> -->
+        <button class="btn btn-primary" type="submit">Enviar registro</button>
+      <br>
+      <br>
+        <!-- </center> -->
+    <!--  </form>  
+      
+      <script>
+    
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+    
+          var forms = document.getElementsByClassName('needs-validation');
+    
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+      <br>
+  </div> -->

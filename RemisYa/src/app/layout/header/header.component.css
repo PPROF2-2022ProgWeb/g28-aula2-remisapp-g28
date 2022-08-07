@@ -1,0 +1,28 @@
+header {
+    width: 100%;
+    min-height: 625px;
+ }
+ 
+ img {
+    width:100%;
+    max-width:400px;
+}
+
+ .wave {
+    position: relative;
+    padding-top: 10rem;
+    background: url('/RemisYa/src/assets/wave.png');
+    background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+ }
+ 
+ .wave:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 216px;
+    background: url('/RemisYa/src/assets/wave.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
