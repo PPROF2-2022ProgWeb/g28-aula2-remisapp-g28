@@ -1,0 +1,60 @@
+.navbar .nav-link {
+    color: white;
+    margin-right: 29px;
+    transition: 0.2s;
+ }
+ 
+ a.nav-link:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+ }
+
+ .navbar-fixed {
+    background-color: rgba(252, 103, 49, 1);
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.6s;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+ }
+ 
+
+/* contacto */
+
+iframe {
+    max-width: 100%;
+ }
+
+/* ultimos ajustes */
+
+.navbar-toggler {
+    padding: .10rem .45rem;
+    border: 1px solid white;
+ }
+ 
+ .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+ }
+ 
+ .navbar-toggler i.bi-list {
+    color: white;
+    font-size: 1.6rem;
+ }
+ 
+ @media (max-width: 992px) {
+    .navbar-collapse {
+       padding-bottom: 19px;
+    }
+    .wave {
+       padding-top: 6rem;
+    }
+ }
+ 
+ @media (max-width: 768px) {
+    .text-center-xs {
+       text-align: center;
+    }
+    .text-center-xs img {
+       width: 366px;
+    }
+ }
