@@ -9,7 +9,7 @@ export class IniciarsesionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
