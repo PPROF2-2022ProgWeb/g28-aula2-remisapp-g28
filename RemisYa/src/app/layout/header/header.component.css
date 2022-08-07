@@ -3,6 +3,11 @@ header {
     min-height: 625px;
  }
  
+ img {
+    width:100%;
+    max-width:400px;
+}
+
  .wave {
     position: relative;
     padding-top: 10rem;

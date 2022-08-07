@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { Navbar2Component } from './layout/navbar2/navbar2.component';
-
 import { FooterComponent } from './layout/footer/footer.component';
+import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component';
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     HeaderComponent,
     Navbar2Component,
     NavbarComponent,
+    SobrenosotrosComponent,
     FooterComponent,
     AppComponent
   ],
