@@ -28,7 +28,8 @@ import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Navbar2Component
   ],
   providers: [],
   bootstrap: [AppComponent]
