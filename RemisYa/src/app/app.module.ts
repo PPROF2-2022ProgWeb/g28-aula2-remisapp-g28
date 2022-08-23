@@ -12,6 +12,7 @@ import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.comp
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RegistrarseComponent } from './pages/registrarse/registrarse.component'
 import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.component'
+import { TiendaComponent } from './pages/tienda/tienda.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.comp
     Navbar2Component,
     NavbarComponent,
     SobrenosotrosComponent,
+    TiendaComponent,
     RegistrarseComponent,
     IniciarsesionComponent,
     ContactoComponent,
