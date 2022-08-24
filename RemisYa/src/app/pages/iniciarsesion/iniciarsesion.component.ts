@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IniciarsesionComponent implements OnInit {
 
+
+  loading: boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
