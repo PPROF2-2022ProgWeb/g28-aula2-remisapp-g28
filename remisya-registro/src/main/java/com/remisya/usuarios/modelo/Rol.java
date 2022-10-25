@@ -32,6 +32,7 @@ public class Rol {
     }
 
     public Rol(Long id, String nombre) {
+        super();
         this.id = id;
         this.nombre = nombre;
     }
@@ -40,4 +41,10 @@ public class Rol {
         super();
     }
 
+    public Rol(String nombre) {
+        super();
+        this.nombre = nombre;
+    }
+
+    
 }

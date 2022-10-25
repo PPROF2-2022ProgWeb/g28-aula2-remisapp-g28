@@ -6,6 +6,7 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { TiendaComponent } from './tienda/tienda.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -16,7 +17,8 @@ import { TiendaComponent } from './tienda/tienda.component';
     RegistrarseComponent,
     IniciarsesionComponent,
     CarritoComponent,
-    TiendaComponent
+    TiendaComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule
