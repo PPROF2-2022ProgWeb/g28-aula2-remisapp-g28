@@ -36,14 +36,15 @@ public class UsuarioServicioImpl implements UsuarioServicio {
         return usuarioLocal;
     }
 
-    @Override
+      @Override
     public usuario obtenerUsuario(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return usuarioRepository.findByUsername(username);
     }
 
     @Override
     public void eliminarUsuario(Long usuarioId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        usuarioRepository.deleteById(usuarioId);
     }
+
     
 }

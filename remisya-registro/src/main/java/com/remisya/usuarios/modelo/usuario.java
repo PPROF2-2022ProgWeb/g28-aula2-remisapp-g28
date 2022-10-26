@@ -2,18 +2,16 @@ package com.remisya.usuarios.modelo;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+import java.io.Serializable;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "usuarios")
-public class usuario /*implements UserDetails*/ {
+public class usuario implements Serializable /*implements UserDetails*/ {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,7 +52,7 @@ public class usuario /*implements UserDetails*/ {
 
     public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    } */
 
     public Long getId() {
         return id;
@@ -68,17 +66,17 @@ public class usuario /*implements UserDetails*/ {
         return username;
     }
 
-    @Override
+   // @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
-    @Override
+    //@Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
-    @Override
+   // @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
@@ -87,7 +85,7 @@ public class usuario /*implements UserDetails*/ {
         this.username = username;
     }
 
-    @Override
+    /*@Override
      public Collection<? extends GrantedAuthority> getAuthorities() {
        Set<Authority> autoridades = new HashSet<>();
         this.usuarioRoles.forEach(usuarioRol -> {
@@ -160,7 +158,7 @@ public class usuario /*implements UserDetails*/ {
         this.usuarioRoles = usuarioRoles;
     }
 
-    public String getUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  //  public String getUsername() {
+  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  //  }
 }
