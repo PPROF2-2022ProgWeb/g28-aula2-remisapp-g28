@@ -159,4 +159,8 @@ public class usuario /*implements UserDetails*/ {
     public void setUsuarioRoles(Set<UsuarioRol> usuarioRoles) {
         this.usuarioRoles = usuarioRoles;
     }
+
+    public String getUsername() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

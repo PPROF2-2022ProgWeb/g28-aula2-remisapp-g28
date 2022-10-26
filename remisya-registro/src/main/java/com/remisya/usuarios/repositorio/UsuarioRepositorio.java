@@ -8,7 +8,8 @@ import com.remisya.usuarios.modelo.usuario;
 
 @Repository
 public interface UsuarioRepositorio extends JpaRepository<usuario, Long> {
+
+    public usuario findByUsername(String username);
     
-    	public usuario findByEmail(String email);
     
 }
