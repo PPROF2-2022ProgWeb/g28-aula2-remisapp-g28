@@ -1,50 +1,50 @@
 package com.remisya.usuarios.modelo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "rol")
+@Table(name = "roles")
 public class Rol {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nombre;
+    private Long rolId;
+    private String rolNombre;
 
-    public Long getId() {
-        return id;
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "rol")
+    private Set<UsuarioRol> usuarioRoles = new HashSet<>();
+
+    public Rol(){
+
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Rol(Long rolId, String rolNombre) {
+        this.rolId = rolId;
+        this.rolNombre = rolNombre;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Long getRolId() {
+        return rolId;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setRolId(Long rolId) {
+        this.rolId = rolId;
     }
 
-    public Rol(Long id, String nombre) {
-        super();
-        this.id = id;
-        this.nombre = nombre;
+    public String getRolNombre() {
+        return rolNombre;
     }
 
-    public Rol() {
-        super();
+    public void setRolNombre(String rolNombre) {
+        this.rolNombre = rolNombre;
     }
 
-    public Rol(String nombre) {
-        super();
-        this.nombre = nombre;
+    public Set<UsuarioRol> getUsuarioRoles() {
+        return usuarioRoles;
     }
 
-    
+    public void setUsuarioRoles(Set<UsuarioRol> usuarioRoles) {
+        this.usuarioRoles = usuarioRoles;
+    }
 }
