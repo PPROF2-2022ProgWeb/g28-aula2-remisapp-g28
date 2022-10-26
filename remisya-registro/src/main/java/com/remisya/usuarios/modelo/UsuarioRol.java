@@ -10,7 +10,7 @@ public class UsuarioRol {
     private Long usuarioRolId;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Usuario usuario;
+    private usuario usuario;
 
     @ManyToOne
     private Rol rol;
@@ -23,11 +23,11 @@ public class UsuarioRol {
         this.usuarioRolId = usuarioRolId;
     }
 
-    public Usuario getUsuario() {
+    public usuario getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(usuario usuario) {
         this.usuario = usuario;
     }
 

@@ -8,11 +8,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuario implements UserDetails {
+public class usuario /*implements UserDetails*/ {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,11 +32,15 @@ public class Usuario implements UserDetails {
     @JsonIgnore
     private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
-    public Usuario(){
+    public usuario(){
 
     }
 
-    public Usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
+    public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   /* public usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -45,6 +50,10 @@ public class Usuario implements UserDetails {
         this.telefono = telefono;
         this.enabled = enabled;
         this.perfil = perfil;
+    }
+
+    public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Long getId() {
@@ -79,13 +88,13 @@ public class Usuario implements UserDetails {
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<Authority> autoridades = new HashSet<>();
+     public Collection<? extends GrantedAuthority> getAuthorities() {
+       Set<Authority> autoridades = new HashSet<>();
         this.usuarioRoles.forEach(usuarioRol -> {
             autoridades.add(new Authority(usuarioRol.getRol().getRolNombre()));
-        });
+         });
         return autoridades;
-    }
+    } */
 
     public String getPassword() {
         return password;
