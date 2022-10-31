@@ -27,7 +27,7 @@ public class usuario implements Serializable /*implements UserDetails*/ {
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "usuario")
-    @JsonIgnore
+    //@JsonIgnore
     private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
     public usuario(){
