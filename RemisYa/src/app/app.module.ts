@@ -13,6 +13,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RegistrarseComponent } from './pages/registrarse/registrarse.component'
 import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.component'
 import { TiendaComponent } from './pages/tienda/tienda.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
     IniciarsesionComponent,
     ContactoComponent,
     FooterComponent,
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
