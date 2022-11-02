@@ -1,15 +1,68 @@
+<div id="el-fomulario-de-registro" class = "bootstrap-wrapper">
+  <div class = "container">
+    <div class = "row" style = "margin-top : 20px;">
+      <div class = "col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img src="../../../assets/registered.png" width = "100" height = "100">
+        </div>
+
+        <h1 class="text-center">Registrate aqui</h1>
+
+
+        <form action="">
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Nombre de usuario</mat-label>
+            <input name = "username" matInput placeholder="Digite su nombre de usuario">
+            <mat-hint>El nombre de usuario debe ser único</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Contraseña</mat-label>
+            <input name = "password" type = "password" matInput placeholder="Digite su contraseña">
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Nombre</mat-label>
+            <input name = "nombre" matInput placeholder="Digite su nombre">
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Apellido</mat-label>
+            <input name = "apellido" matInput placeholder="Digite su apellido">
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Email</mat-label>
+            <input name = "email" type="email" matInput placeholder="Digite su email">
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Telefono</mat-label>
+            <input  name = "telefono" matInput placeholder="Digite su telefono">
+          </mat-form-field>
+
+          <div class = "container text-center">
+            <button class="login-button btn-primary">Registrar</button>
+            <button type="reset" style = "margin-left: 20px;" class="login-button btn-primary">Limpiar</button>
+          </div>
+        </form>
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!--
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 <div id="el-fomulario-de-registro" class="Registro">
- 
- 
- <!--<div class="login-header">
-    <h2 style="color:#000000">Registrarse</h2>
-  </div> -->
-
-
-
-  <!--<form (ngSubmit) = "formSubmit()">-->
     <div class="login-form">
     <h2 style="color:#000000">Registrarse</h2>
 		<h3>Nombre:</h3>
@@ -47,44 +100,4 @@
     <h6 class="no-access">Se encuentra a un paso de ser miembro de Remis Ya!</h6>
   </div> 
 
-
-
-<!-- 
-<form (ngSubmit) = "formSubmit()">
- <mat-form-field class="full-width"  appearance = "outline">
-    <mat-label>Nombre de usuario</mat-label>
-    <input required [(ngModel)] = "username" name = "username" matInput placeholder="Digite su nombre de usuario">
-    <mat-hint>El nombre de usuario debe ser único</mat-hint>
-  </mat-form-field> 
-
-
-  <mat-form-field class="full-width"  appearance = "outline">
-    <mat-label>Contraseña</mat-label>
-    <input required [(ngModel)] = "password" name = "password" type = "password" matInput placeholder="Digite su contraseña">
-  </mat-form-field>
-
- <mat-form-field class="full-width"  appearance = "outline"> 
-    <mat-label>Nombre</mat-label>
-    <input required [(ngModel)] = "nombre" name = "nombre" matInput placeholder="Digite su nombre">
-  </mat-form-field>
-
- <mat-form-field class="full-width"  appearance = "outline">
-    <mat-label>Apellido</mat-label>
-    <input required [(ngModel)] = "apellido" name = "apellido" matInput placeholder="Digite su apellido">
-  </mat-form-field>
-
- <mat-form-field class="full-width"  appearance = "outline">
-    <mat-label>Email</mat-label>
-    <input required [(ngModel)] = "email" name = "email" type="email" matInput placeholder="Digite su email">
-  </mat-form-field>
-
- <mat-form-field class="full-width"  appearance = "outline">
-    <mat-label>Telefono</mat-label>
-    <input required [(ngModel)] = "telefono" name = "telefono" matInput placeholder="Digite su telefono">
-  </mat-form-field>
-
-  <div class = "container text-center">
-    <button mat-raised-button color="primary">Registrar</button>
-    <button type="reset" style = "margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
-  </div>
-</form> -->
+-->
