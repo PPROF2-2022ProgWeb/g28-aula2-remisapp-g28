@@ -19,6 +19,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -30,9 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IniciarsesionComponent,
     ContactoComponent,
     FooterComponent,
-    AppComponent,
-    DashboardComponent,
-    CarritoComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
