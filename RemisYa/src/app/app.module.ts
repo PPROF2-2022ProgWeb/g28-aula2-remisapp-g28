@@ -1,10 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { Navbar2Component } from './layout/navbar2/navbar2.component';
@@ -33,14 +34,19 @@ import {MatButtonModule} from '@angular/material/button';
     IniciarsesionComponent,
     ContactoComponent,
     FooterComponent,
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatFormFieldModule
+    FormsModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
