@@ -32,7 +32,7 @@ export class RegistrarseComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirUsuario(this.user).subscribe(
+    this.userService.añadirUsuario({ user: this.user }).subscribe(
       (data) => {
         console.log(data);
         alert('Usuario guardado con exito ');
