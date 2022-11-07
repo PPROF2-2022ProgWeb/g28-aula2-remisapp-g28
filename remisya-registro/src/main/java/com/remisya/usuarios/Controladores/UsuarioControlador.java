@@ -7,6 +7,7 @@ import com.remisya.usuarios.servicio.UsuarioServicio;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin("*")
 public class UsuarioControlador {
     
         @Autowired
@@ -25,7 +27,7 @@ public class UsuarioControlador {
 
     @PostMapping("/")
     public usuario guardarUsuario(@RequestBody usuario usuario) throws Exception{
-        // usuario.setPerfil("default.png");
+         usuario.setPerfil("default.png");
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
         Rol rol = new Rol();
