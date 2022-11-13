@@ -7,6 +7,7 @@ import com.remisya.usuarios.servicio.UsuarioServicio;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,13 +23,20 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class UsuarioControlador {
     
-        @Autowired
+    @Autowired
     private UsuarioServicio usuarioService;
+    
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @PostMapping("/")
     public usuario guardarUsuario(@RequestBody usuario usuario) throws Exception{
          usuario.setPerfil("default.png");
-        Set<UsuarioRol> usuarioRoles = new HashSet<>();
+        
+         Set<UsuarioRol> usuarioRoles = new HashSet<>();
+         
+         usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
+
 
         Rol rol = new Rol();
         rol.setRolId(2L);
@@ -37,6 +45,8 @@ public class UsuarioControlador {
         UsuarioRol usuarioRol = new UsuarioRol();
         usuarioRol.setUsuario(usuario);
         usuarioRol.setRol(rol);
+        
+        usuarioRoles.add(usuarioRol);
         
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
         

@@ -24,9 +24,9 @@ public class Rol {
         this.rolNombre = rolNombre;
     }
 
-    public Rol(String role_user) {
+   /* public Rol(String role_user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    } */
 
     public Long getRolId() {
         return rolId;

@@ -27,9 +27,9 @@ public class UsuarioServicioImpl implements UsuarioServicio {
             throw new Exception("El usuario ya esta presente");
         }
         else{
-            usuarioRoles.forEach(usuarioRol -> {
+            for(UsuarioRol usuarioRol:usuarioRoles){
                 rolRepository.save(usuarioRol.getRol());
-            });
+            }
             usuario.getUsuarioRoles().addAll(usuarioRoles);
             usuarioLocal = usuarioRepository.save(usuario);
         }

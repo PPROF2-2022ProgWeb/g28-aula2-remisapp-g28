@@ -2,12 +2,15 @@ package com.remisya.usuarios.modelo;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import java.io.Serializable;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
+import java.util.Collection;
 
 @Entity
 @Table(name = "usuarios")
@@ -27,18 +30,18 @@ public class usuario implements Serializable /*implements UserDetails*/ {
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "usuario")
-    //@JsonIgnore
+    @JsonIgnore
     private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
     public usuario(){
 
     }
 
-    public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
+   /* public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    } */
 
-   /* public usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
+    public usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -50,7 +53,7 @@ public class usuario implements Serializable /*implements UserDetails*/ {
         this.perfil = perfil;
     }
 
-    public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
+   /* public usuario(String nombre, String apellido, String email, String password, List<Rol> asList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     } */
 
@@ -66,12 +69,12 @@ public class usuario implements Serializable /*implements UserDetails*/ {
         return username;
     }
 
-   // @Override
+    //@Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
-    //@Override
+   // @Override
     public boolean isAccountNonLocked() {
         return true;
     }
@@ -85,14 +88,14 @@ public class usuario implements Serializable /*implements UserDetails*/ {
         this.username = username;
     }
 
-    /*@Override
+   // @Override
      public Collection<? extends GrantedAuthority> getAuthorities() {
        Set<Authority> autoridades = new HashSet<>();
         this.usuarioRoles.forEach(usuarioRol -> {
             autoridades.add(new Authority(usuarioRol.getRol().getRolNombre()));
          });
         return autoridades;
-    } */
+    } 
 
     public String getPassword() {
         return password;
@@ -135,7 +138,7 @@ public class usuario implements Serializable /*implements UserDetails*/ {
     }
 
     public boolean isEnabled() {
-        return enabled;
+        return true;
     }
 
     public void setEnabled(boolean enabled) {
