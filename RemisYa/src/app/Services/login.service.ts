@@ -66,7 +66,7 @@ export class LoginService {
     let userStr = localStorage.getItem('user');
 
     if(userStr != null){
-                //Parsear un string a JSON
+    //Parsear un string a JSON
       return JSON.parse(userStr);
 
     }else{
