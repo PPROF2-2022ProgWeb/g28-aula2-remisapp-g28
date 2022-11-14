@@ -1,12 +1,16 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 <div  id= "iniciars" class="login">
-  <div class="login-header">
-    <div class="container text-center">
-      <img src="../../../assets/log-in.png" width = "100" height = "100">
+  <div class = "container">
+    <div class = "row" style = "margin-top : 20px;">
+      <div class = "col-md-6 offset-md-3">
+        <div class="container text-center">
+  <img src="../../../assets/log-in.png" width = "100" height = "100">
     </div>
-    <h1>Login</h1>
-  </div>
+    <h1 class="text-center">Login</h1>
+
+
+  <!--
   <div class="login-form">
     <h3>Nombre de usuario:</h3>
     <input type="text" placeholder="Username"/><br>
@@ -20,7 +24,38 @@
 </div>
 <div class="error-page">
   <div class="try-again">Error: ¿Intentar de nuevo?</div>
-</div>
+</div> -->
+
+<form (ngSubmit) = "formSubmit()">
+  <mat-form-field class="full-width"  appearance = "outline">
+    <mat-label>Nombre de usuario</mat-label>
+    <!-- required es un campo requerido -->
+    <input [(ngModel)] = "loginData.username" name="username" matInput required placeholder="Ingrese nombre de usuario"/>
+    <mat-hint>No es un usuario válido</mat-hint>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="full-width"  appearance = "outline">
+    <mat-label>Contraseña</mat-label>
+    <!-- required es un campo requerido -->
+    <input [(ngModel)] = "loginData.password" name="password" type="password" matInput required placeholder="Ingrese su contraseña"/>
+    <mat-hint>La contraseña no es válida</mat-hint>
+  </mat-form-field>
+
+  <br>
+
+  <div class = "container text-center">
+    <button type="submit" class="login-button btn-primary">Acceder</button>
+    <button type="reset" style = "margin-left: 20px;" class="login-button btn-primary">Limpiar</button>
+  </div>
+
+ <!-- <div class="container text-center"> -->
+    <!-- Boton submit -->
+   <!-- <button type="submit" mat-raised-button color="primary">Iniciar sesión</button>
+  -->
+    <!-- Reset sirve para limpiar los campos -->
+   <!-- <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+
+  </div> -->
 
 
 <!--
