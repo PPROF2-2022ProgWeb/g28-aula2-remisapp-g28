@@ -19,6 +19,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
 
@@ -46,6 +47,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatInputModule,
     HttpClientModule
   ],
   providers: [],
