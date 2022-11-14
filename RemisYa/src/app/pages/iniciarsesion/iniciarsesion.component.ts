@@ -62,7 +62,7 @@ export class IniciarsesionComponent implements OnInit {
           }else if(this.loginService.getUserRol() == "NORMAL"){
 
             //window.location.href = "/home";
-            this.router.navigate(['shop']);
+            this.router.navigate(['user-dashboard']);
             this.loginService.loginStatusSubjec.next(true);
 
           }else{

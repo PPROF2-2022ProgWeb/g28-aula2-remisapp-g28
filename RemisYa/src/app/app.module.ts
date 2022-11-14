@@ -15,12 +15,13 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RegistrarseComponent } from './pages/registrarse/registrarse.component'
 import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.component'
 import { TiendaComponent } from './pages/tienda/tienda.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { authInterceptorProviders } from './Services/auth.interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 
 
@@ -50,7 +51,18 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     HttpClientModule
   ],
-  providers: [],
+  exports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatInputModule,
+    HttpClientModule
+  ],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

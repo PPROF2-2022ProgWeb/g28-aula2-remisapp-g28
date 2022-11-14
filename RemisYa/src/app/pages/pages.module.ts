@@ -6,7 +6,8 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { TiendaComponent } from './tienda/tienda.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     IniciarsesionComponent,
     CarritoComponent,
     TiendaComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserDashboardComponent
   ],
   imports: [
     CommonModule
