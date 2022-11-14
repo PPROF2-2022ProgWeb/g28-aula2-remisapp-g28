@@ -29,16 +29,48 @@ export class RegistrarseComponent implements OnInit {
     console.log(this.user);
     if (this.user.username == '' || this.user.username == null){
       this.snack.open('El nombre de usuario es requerido!' , 'Aceptar', {
-        duration : 3000,
-        verticalPosition : 'top',
+        duration : 2000,
+        verticalPosition : 'bottom',
         horizontalPosition : 'right'
       });
       return;
     }
     if (this.user.password == '' || this.user.password == null){
       this.snack.open('La contraseña es requerida!' , 'Aceptar', {
-        duration : 3000,
-        verticalPosition : 'top',
+        duration : 2000,
+        verticalPosition : 'bottom',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+    if (this.user.nombre == '' || this.user.nombre == null){
+      this.snack.open('El nombre es requerido!' , 'Aceptar', {
+        duration : 2000,
+        verticalPosition : 'bottom',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+    if (this.user.apellido == '' || this.user.apellido == null){
+      this.snack.open('El apellido es requerido!' , 'Aceptar', {
+        duration : 2000,
+        verticalPosition : 'bottom',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+    if (this.user.email == '' || this.user.email == null){
+      this.snack.open('El email es requerido!' , 'Aceptar', {
+        duration : 2000,
+        verticalPosition : 'bottom',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+    if (this.user.telefono == '' || this.user.telefono == null){
+      this.snack.open('El telefono es requerido!' , 'Aceptar', {
+        duration : 2000,
+        verticalPosition : 'bottom',
         horizontalPosition : 'right'
       });
       return;
