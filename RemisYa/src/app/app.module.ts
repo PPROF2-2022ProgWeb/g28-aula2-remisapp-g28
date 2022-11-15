@@ -22,8 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { authInterceptorProviders } from './Services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-
-
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { MatCardModule } from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     FooterComponent,
     AppComponent,
     DashboardComponent,
-    CarritoComponent
+    CarritoComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     MatFormFieldModule,
     MatSnackBarModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatListModule
   ],
   exports: [
     BrowserModule,

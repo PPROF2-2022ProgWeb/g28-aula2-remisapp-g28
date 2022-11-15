@@ -3,30 +3,44 @@
   <div class="container">
     <img src="../../../assets/logoremis.png" class="user user-chip-xxlg bg-default"
     alt="user-image"  width="25" height="25">
-     <a class="navbar-brand text-white fs-3" href="#">--> Remis Ya!</a>
+     <a color= "#000" class="navbar-brand text-white fs-3" [routerLink]="'/home'">--> Remis Ya!</a>
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list"></i>
     </button>
      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto me-lg-4 py-3">
            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+              <a class="nav-link" aria-current="page" [routerLink]="'/home'">Inicio</a>
            </li>
            <li class="nav-item">
-              <a class="nav-link" href="#services">Sobre Nosotros</a>
+              <a class="nav-link" [routerLink]="'/Sobrenosotros'">Sobre Nosotros</a>
            </li>
            <li class="nav-item">
-              <a class="nav-link" href="#tiendada">Tienda</a>
+              <a class="nav-link" [routerLink]="'/tienda'">Tienda</a>
            </li>
            <li class="nav-item">
-              <a class="nav-link" href="#el-fomulario-de-registro">Registrarse</a>
+              <a *ngIf="!login.isLoggedIn()" class="nav-link" [routerLink]="'/registrarse'">Registrarse</a>
            </li>
            <li class="nav-item">
-            <a class="nav-link" href="#iniciars">Iniciar sesión</a>
+            <a *ngIf="!login.isLoggedIn()" class="nav-link" [routerLink]="'/LogIn'">Iniciar sesión</a>
          </li>
          <li>
-            <a class="nav-link" href="#contacto">Contacto</a>
+            <a class="nav-link" [routerLink]="'/contact-us'">Contacto</a>
          </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn" *ngIf="login.isLoggedIn()" routerLink="/admin">
+            {{ login.getUser().username }}
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="login.isLoggedIn()"> </a>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn btn-light" *ngIf="login.isLoggedIn()" (click)="logOut()">Cerrar sesion</button>
+        </li>
       </ul>
     </div>
 
