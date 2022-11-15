@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class UsuarioControlador {
     
+    
     @Autowired
     private UsuarioServicio usuarioService;
     
@@ -31,12 +32,11 @@ public class UsuarioControlador {
 
     @PostMapping("/")
     public usuario guardarUsuario(@RequestBody usuario usuario) throws Exception{
-         usuario.setPerfil("default.png");
-        
-         Set<UsuarioRol> usuarioRoles = new HashSet<>();
+        usuario.setPerfil("default.png");
          
-         usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
+        usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
 
+        Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
         Rol rol = new Rol();
         rol.setRolId(2L);

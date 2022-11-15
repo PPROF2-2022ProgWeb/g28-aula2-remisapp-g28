@@ -29,75 +29,75 @@ public class ProductoController {
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<Producto> getById(@PathVariable("id") int id) {
-        if (!productoService.existsById(id))
+        if (!productoService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe"), HttpStatus.NOT_FOUND);
-
+        }else{
         Producto producto = productoService.getOne(id).get();
         return new ResponseEntity(producto, HttpStatus.OK);
-
+        }
+   
     }
 
 
-    @GetMapping("/detalles/{nombre}")
+    
+        @GetMapping("/detailname/{nombre}")
     public ResponseEntity<Producto> getByNombre(@PathVariable("nombre") String nombre) {
-        if (productoService.existsByNombre(nombre))
+        if (!productoService.existsByNombre(nombre)){
             return new ResponseEntity(new Mensaje("No existe"), HttpStatus.NOT_FOUND);
-
+        }else{
             Producto producto = productoService.getByNombre(nombre).get();
             return new ResponseEntity(producto, HttpStatus.OK);
-
+        }
     }
-
-
+    
+    
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody ProductoDto productoDto) {
-        if (StringUtils.isBlank(productoDto.getNombre()))
+       
+        if(StringUtils.isBlank(productoDto.getNombre())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-
-        if (productoDto.getPrecio() < 0)
-            return new ResponseEntity(new Mensaje("El precio debe ser mayor que 0 "), HttpStatus.BAD_REQUEST);
-
-        if (productoService.existsByNombre(productoDto.getNombre()))
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-
-
+        } else if  (productoDto.getPrecio() == null || productoDto.getPrecio()<0){
+            return new ResponseEntity(new Mensaje("El precio es obligatorio y mayor q 0"), HttpStatus.BAD_REQUEST);
+        }else if (productoService.existsByNombre(productoDto.getNombre())){
+            return new ResponseEntity(new Mensaje("Ese nombre ya existe"),HttpStatus.BAD_REQUEST);
+        }else{
             Producto producto = new Producto(productoDto.getNombre(), productoDto.getPrecio());
             productoService.save(producto);
             return new ResponseEntity(new Mensaje("Producto creado"), HttpStatus.OK);
-        }
-
-        @PostMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") int id, ProductoDto productoDto) {
-
-        if (!productoService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("No existe"), HttpStatus.NOT_FOUND);
-        }
-
-        if (StringUtils.isBlank(productoDto.getNombre()))
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-
-        if (productoDto.getPrecio() < 0)
-            return new ResponseEntity(new Mensaje("El precio debe ser mayor que 0 "), HttpStatus.BAD_REQUEST);
-
-        if (productoService.existsByNombre(productoDto.getNombre()) && productoService.getByNombre(productoDto.getNombre()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-
-
-        Producto producto = productoService.getOne(id).get();
-        producto.setNombre(productoDto.getNombre());
-        producto.setPrecio(productoDto.getPrecio());
-        productoService.save(producto);
-        return new ResponseEntity(new Mensaje("Producto Actualizado"), HttpStatus.OK);
+        }   
     }
+
+    
+        @PostMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable("id")int id, @RequestBody ProductoDto productoDto) {
+
+        if (!productoService.existsById(id)){
+            return new ResponseEntity(new Mensaje("No existe"), HttpStatus.NOT_FOUND);
+        }else if (productoService.existsByNombre(productoDto.getNombre()) && productoService.getByNombre(productoDto.getNombre()).get().getId() != id){
+            return new ResponseEntity(new Mensaje("Ese nombre ya existe"),HttpStatus.BAD_REQUEST);
+        }else if(StringUtils.isBlank(productoDto.getNombre())){
+            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        }else if  (productoDto.getPrecio()<0){
+            return new ResponseEntity(new Mensaje("El precio es obligatorio y mayor q 0"), HttpStatus.BAD_REQUEST);
+        }else{
+            Producto producto = productoService.getOne(id).get();
+            producto.setPrecio(productoDto.getPrecio());
+            productoService.save(producto);
+            return new ResponseEntity(new Mensaje("Producto editado"), HttpStatus.OK);
+        }
+    }
+    
 
     @DeleteMapping ("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") int id){
-        if(!productoService.existsById(id))
+    public ResponseEntity<?> delete(@PathVariable("id") int id) {
+        if (!productoService.existsById(id)) {
             return new ResponseEntity(new Mensaje("No existe"), HttpStatus.NOT_FOUND);
-        productoService.delete(id);
-        return new ResponseEntity(new Mensaje("Producto Eliminado"), HttpStatus.OK);
-    }
+        } else {
+            productoService.delete(id);
+            return new ResponseEntity(new Mensaje("Producto Eliminado"), HttpStatus.OK);
 
+        }
+    }
 }
 
 

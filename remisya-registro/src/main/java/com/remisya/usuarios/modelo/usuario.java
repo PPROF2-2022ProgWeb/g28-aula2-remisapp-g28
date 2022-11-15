@@ -14,7 +14,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "usuarios")
-public class usuario implements Serializable /*implements UserDetails*/ {
+public class usuario implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,17 +69,17 @@ public class usuario implements Serializable /*implements UserDetails*/ {
         return username;
     }
 
-    //@Override
+    @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
-   // @Override
+    @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
-   // @Override
+   @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
@@ -88,12 +88,12 @@ public class usuario implements Serializable /*implements UserDetails*/ {
         this.username = username;
     }
 
-   // @Override
-     public Collection<? extends GrantedAuthority> getAuthorities() {
-       Set<Authority> autoridades = new HashSet<>();
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Set<Authority> autoridades = new HashSet<>();
         this.usuarioRoles.forEach(usuarioRol -> {
             autoridades.add(new Authority(usuarioRol.getRol().getRolNombre()));
-         });
+        });
         return autoridades;
     } 
 
@@ -138,7 +138,7 @@ public class usuario implements Serializable /*implements UserDetails*/ {
     }
 
     public boolean isEnabled() {
-        return true;
+        return enabled;
     }
 
     public void setEnabled(boolean enabled) {

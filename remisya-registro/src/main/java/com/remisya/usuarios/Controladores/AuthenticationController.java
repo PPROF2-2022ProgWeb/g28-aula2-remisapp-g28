@@ -36,7 +36,7 @@ public class AuthenticationController {
     public ResponseEntity<?> generarToken(@RequestBody JwtRequest jwtRequest) throws Exception {
         try{
             autenticar(jwtRequest.getUsername(),jwtRequest.getPassword());
-        }catch (UsuarioNotFoundException exception){
+        }catch (Exception exception){
             exception.printStackTrace();
             throw new Exception("Usuario no encontrado");
         }
