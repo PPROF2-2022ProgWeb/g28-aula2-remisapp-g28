@@ -8,7 +8,7 @@ import baserUrl from './helper';
 })
 export class LoginService {
 
-  public loginStatusSubjec = new Subject<boolean>();
+  public loginStatusSubjec = new Subject<boolean>;
 
   constructor ( private http:HttpClient ) { }
 
@@ -24,7 +24,7 @@ export class LoginService {
   public loginUser(token:any){
     //Establecemos el valor osea almacenar el token
     localStorage.setItem('token', token);
-
+    return true;
   }
   //Metodo para comprobar si estas conectado o no
   public isLoggedIn(){
@@ -56,7 +56,7 @@ export class LoginService {
 
   //Establecer un usuario en el localstoge
   public setUser(user:any){
-                                //Convierte un valor js a JSON string
+  //Convierte un valor js a JSON string
     localStorage.setItem('user', JSON.stringify(user));
 
   }

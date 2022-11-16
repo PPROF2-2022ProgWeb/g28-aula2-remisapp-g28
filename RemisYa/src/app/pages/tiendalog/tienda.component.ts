@@ -3,11 +3,11 @@ import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/Services/producto.service';
 
 @Component({
-  selector: 'app-carrito',
-  templateUrl: './carrito.component.html',
-  styleUrls: ['./carrito.component.css']
+  selector: 'app-tienda',
+  templateUrl: './tienda.component.html',
+  styleUrls: ['./tienda.component.css']
 })
-export class CarritoComponent implements OnInit {
+export class TiendalogComponent implements OnInit {
 
   productos: Producto[] = [];
 
@@ -16,6 +16,7 @@ export class CarritoComponent implements OnInit {
   ngOnInit(): void {
 
     this.cargarProductos();
+
 
   }
 
@@ -31,7 +32,6 @@ export class CarritoComponent implements OnInit {
   }
 
   borrar( id : number) {
-    alert("Borrar el " + id);
+    alert("Eliminar " + id);
   }
-
 }

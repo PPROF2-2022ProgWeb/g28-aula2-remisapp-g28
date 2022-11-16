@@ -1,0 +1,39 @@
+
+
+<div class="boostrap-wrapper vevo">
+  <div class="cointainer">
+    <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px">
+
+
+
+      <mat-card style="padding-top: 50px; padding-bottom: 50px">
+        <div class="container text-center" style="padding-bottom: 30px">
+          <img src="../../../../src/assets/remises.jpg" style="width: 100px" alt="" />
+          <h1 class="text-center">Registrar plan o abono</h1>
+        </div>
+
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form-style">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Ingrese nombre del plan y Detalles</mat-label>
+            <input matInput required [(ngModel)]="nombre" name="nombre" placeholder="Detalles del plan" />
+            <mat-hint>Ingrese nombre del plan y Detalles</mat-hint>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Precio</mat-label>
+            <input type="number" matInput required [(ngModel)]="precio" name="precio" placeholder="Digite el precio" />
+          </mat-form-field>
+
+
+          <div class="container text-center">
+            <!-- Boton submit -->
+            <button class="login-button btn-primary" [disabled]="!f.valid && precio<= 0">Registrar</button>
+            <!-- Reset sirve para limpiar los campos -->
+            <button type="reset" style="margin-left: 20px" class="login-button btn-primary">Limpiar</button>
+          </div>
+        </form>
+      </mat-card>
+      <button type="button" class="btn btn-success" style="width: 100%;" routerLink="/admin">Volver</button>
+    </div>
+  </div>
+</div>
+

@@ -1,3 +1,25 @@
+.card {
+  border:.5px solid #fff;
+  background:linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+  box-sizing:border-box;
+  padding-top:15px;
+    padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+}
+
+
 .profile-img{
     max-width: 150px;
     max-height: 150px;
@@ -15,13 +37,26 @@
     border: 0.5px solid gainsboro ;
   }
   
-  
+  button {
+    height:30px;
+    width:100px;
+   /* background:#fff;
+    border:1px solid #f2f2f2; */
+    border-radius:20px;
+  /*  color: slategrey; */
+    text-transform:uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+  }     
   
   .card{
     padding-top: 50px;
     padding-bottom: 200px;
   }
   
+  #Admin {
+    background: cornflowerblue;
+  }
   
 /* Cierre de primer css */
 

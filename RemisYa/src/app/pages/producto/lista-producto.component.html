@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <mat-card class="card card-style">
+      <h1 class="text-center" style="padding-top: 20px;">Productos</h1>
+      <mat-card-content >
+        <div class="bootstrap-wrapper">
+            <div class="text-center">
+              <img
+                src="../../../../assets/planta1.jpg"
+                alt=""
+                class="profile-img"
+              />
+              <br />
+              <br />
+              <div class="mt20">
+                <h2></h2>
+              </div>
+            </div>
+            <div class="col-md-10 offset-md-1">
+              <table class="table mat-table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio ARG$</th>
+                    <th scope="col">Borrar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let producto of productos">
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td *ngIf="producto.id != undefined">
+                      <button class="btn btn-outline-danger boton" (click)="borrar(producto.id)"><i class="far fa-trash-alt"></i> Borrar </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+      </mat-card-content>
+
+    </mat-card>
+    <button type="button" class="btn btn-success" style="width: 100%;" routerLink="/admin">Volver</button>
+  </div>
+</div>
+

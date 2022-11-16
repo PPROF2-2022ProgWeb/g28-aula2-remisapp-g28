@@ -6,10 +6,14 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { IniciarsesionComponent } from './pages/iniciarsesion/iniciarsesion.component';
+import { CrearProductoComponent } from './pages/producto/crear-producto.component';
+import { ListaProductoComponent } from './pages/producto/lista-producto.component';
 import { RegistrarseComponent } from './pages/registrarse/registrarse.component';
 import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
+import { TiendalogComponent } from './pages/tiendalog/tienda.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { PerfilComponent } from './perfil/perfil.component';
 import { AdminGuard } from './Services/admin.guard';
 import { NormalGuard } from './Services/normal.guard';
 
@@ -26,6 +30,11 @@ const routes: Routes = [
   { path: 'LogIn', component: IniciarsesionComponent, pathMatch: 'full' },
   { path: 'admin', component: DashboardComponent, pathMatch: 'full', canActivate: [AdminGuard] }, //canActivate: [AdminGuard]
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }, //canActivate: [AdminGuard]
+  { path: 'perfil', component: PerfilComponent, pathMatch: 'full', canActivate: [NormalGuard] }, //canActivate: [AdminGuard]
+  { path: 'tiendalog', component: TiendalogComponent, pathMatch: 'full'}, 
+  {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
+  {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
+
 ];
 
 @NgModule({

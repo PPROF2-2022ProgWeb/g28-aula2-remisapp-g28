@@ -1,19 +1,23 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
+import { rol } from '../interfaces/rol.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-
+  private baseUrl: string = "http://localhost:8080"; 
+  private _user: { username: any; } | undefined;
 
 
   // REGISTRO
 
   register(nombre: string ,apellido: string ,email: string ,provincia: string ,fechaNac: Date ,contraseña:string ,contraseña2:string ) {
 
-   /*
-    const url = `${ this.baseUrl}/registro`;
+  
+         /* const url = `${ this.baserUrl}/registro`;
     const body = { nombre,apellido,email,provincia,contraseña,fechaNac,contraseña2};
 
    return this.http.post(url, body).subscribe(resp => {
@@ -41,6 +45,19 @@ export class AuthService {
 */
 
     }
+
+
+    getRole():Observable<rol[]>{
+
+      const url = `${this.baseUrl}/valid`;
+      const headers = new HttpHeaders()
+      .set('Authorization',localStorage.getItem('token') || ''); // o String vacio. 
+    
+    return this.http.get<rol[]>(url, { headers })
+    
+    }
+
+    constructor(private http: HttpClient) { }
 /*
       // LOGUEO
 

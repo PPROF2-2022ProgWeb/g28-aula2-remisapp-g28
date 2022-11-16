@@ -24,12 +24,12 @@ public class RemisyaRegistroApplication implements CommandLineRunner {
  
             /*try{
 			Usuario usuario = new Usuario();
-			usuario.setNombre("Alex");
-			usuario.setApellido("Soto");
-			usuario.setUsername("alex");
+			usuario.setNombre("Fabricio");
+			usuario.setApellido("Toso");
+			usuario.setUsername("Aprobado");
 			usuario.setPassword("12345");
-			usuario.setEmail("alex@gmail.com");
-			usuario.setTelefono("988212020");
+			usuario.setEmail("fmt@gmail.com");
+			usuario.setTelefono("9654987321");
 			usuario.setPerfil("foto.png");
 			Rol rol = new Rol();
 			rol.setRolId(2L);

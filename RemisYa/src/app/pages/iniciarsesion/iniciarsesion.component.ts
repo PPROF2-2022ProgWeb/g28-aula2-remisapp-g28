@@ -51,6 +51,7 @@ export class IniciarsesionComponent implements OnInit {
         this.loginService.loginUser(data.token);
         this.loginService.getCurrentUser().subscribe((user:any) => {
           this.loginService.setUser(user);
+          this.loginService.loginUser(data.token);
           console.log(user);
 
           if(this.loginService.getUserRol() == "ADMIN"){

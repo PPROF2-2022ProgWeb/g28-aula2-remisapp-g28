@@ -1,0 +1,128 @@
+<br>
+<br>
+<br>
+<header header="Datos Personales">
+     <div class = "row" style = "margin-top : 20px;">
+          <div class = "col-md-6 offset-md-3">
+            <div class="container text-center">
+              <img src="../../../assets/registered.png" width = "100" height = "100">
+            </div>
+
+            <h1 class="text-center">Datos de usuario {{user.username}}</h1>
+    <br>
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Nombre: </span>
+                <span class="p-inputgroup-addon">{{user.nombre}}</span>        
+            </div>
+        </div>
+        
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup"> 
+                <span class="p-inputgroup-addon">Apellido: </span>
+                <span class="p-inputgroup-addon">{{user.apellido}}</span>               
+            </div>
+        </div>                
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Telefono: </span>
+                <span class="p-inputgroup-addon">{{user.telefono}}</span>    
+            </div>
+        </div>
+    </div>   
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Tipo de Usuario: </span>
+                <span class="p-inputgroup-addon">{{user.authorities[0].authority}}</span>         
+            </div>
+        </div>  
+            <div class="col-12 md:col-4">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">Email: </span>
+                    <span class="p-inputgroup-addon">{{user.email}}</span>         
+                </div>
+            </div>
+        </div>
+    <br>
+            <h1 class="text-center">Actualice sus datos aquí</h1>
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Nombre</span>
+                <input type="text" pInputText [(ngModel)]="user.nombre">         
+            </div>
+        </div>
+        
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup"> 
+                <span class="p-inputgroup-addon">Apellido</span>
+                <input type="text" pInputText [(ngModel)]="user.apellido">   
+             
+            </div>
+        </div>               
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Telefono</span>
+                <input type="number"  [(ngModel)]="user.telefono">     
+            </div>
+        </div>
+    </div>    
+    <div class="grid p-fluid">
+     <!--   <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Tipo de Usuario</span>
+                <input type="text" pInputText [(ngModel)]="rol.authority" disabled="true">         
+            </div>
+        </div>-->
+            <div class="col-12 md:col-4">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">Email</span>
+                    <input type="email" pInputText [(ngModel)]="user.email">         
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class = "container text-center">
+        <button class="login-button btn-primary">Grabar</button>
+        <button type="reset" style = "margin-left: 20px;" class="login-button btn-primary">Limpiar</button>
+    </div>
+<br>
+</div>
+<br><br>
+<div header="Contraseña">
+    <br>
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">Contraseña Actual</span>
+                <input type="password" pInputText placeholder="Ingrese contraseña actual">         
+            </div>
+        </div>        
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup"> 
+                <span class="p-inputgroup-addon">Nueva Contraseña</span>
+                <input type="password" pInputText placeholder="Ingrese nueva contraseña">   
+             
+            </div>
+        </div>               
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup"> 
+                <span class="p-inputgroup-addon">Repetir Contraseña</span>
+                <input type="password" pInputText placeholder="Repita su nueva contraseña">               
+            </div>
+        </div>    
+    </div>
+    <br>
+    <div class = "container text-center">
+        <button class="login-button btn-primary">Confirmar</button>
+    </div>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" style="width: 100%;" routerLink="/user-dashboard">Volver</button>
+</div>
+</div>
+</header>
+
+

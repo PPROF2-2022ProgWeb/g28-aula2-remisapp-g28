@@ -1,0 +1,34 @@
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    align-items: center; 
+    align-content: normal; 
+}
+
+header {
+
+    background:linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+    border-radius:10px;
+    box-shadow:0px 0px 10px #000;
+    text-align:left;
+    margin-left:40px;
+    box-sizing:border-box;
+    padding-top:15px;
+      padding-bottom:10%;
+    margin:5% auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+  }
+ 
+ header input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+  }
+  

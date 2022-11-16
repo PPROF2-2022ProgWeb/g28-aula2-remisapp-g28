@@ -1,12 +1,23 @@
 
-.navbar .nav-link {
+.navbar .nav-link  {
    background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 12, 1) 100%);
     color: white;
-    margin-right: 29px;
+    margin-right: 7px;
     transition: 0.2s;
  }
  
+#dash {
+   background: linear-gradient(90deg, rgb(13, 173, 67) 0%, rgba(97, 212, 107, 0.642) 100%);
+    margin-right: 15px;
+    margin-left: 15px;
+    border: rgb(0, 119, 255) 0px solid;
+    transition: 0.2s;
+}
 
+#dash:hover {
+   padding-bottom: 3px;
+   border-bottom: 2px solid white;
+}
 
  a.nav-link:hover {
     padding-bottom: 3px;

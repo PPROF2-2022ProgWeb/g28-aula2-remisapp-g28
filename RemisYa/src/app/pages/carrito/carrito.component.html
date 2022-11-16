@@ -1,1 +1,105 @@
-<p>carrito works!</p>
+<!--<header>
+<div id="tiendada" class="container py-5">
+    <div class="row mt-5">
+        <div class="bg-app">
+            <div class="container py-5">
+                <div class="row">
+                        <h2 class="fw-bold">Tienda de Remis Ya!</h2>
+                        <p class="text-lg">En nuestra tienda tiene la posibilidad de adquirir el abono mensual que más se adapte a su necesidad y bolsillo.</p>
+                    </div>
+                </div>        
+                <div class="row mt-4">
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="card shadow mt-4 mt-sm-0">
+                            <div class="pt-3 m-auto">
+                                <img src="../../../assets/Okok.jpg" width="90" height="90" class="avatar-md circle m-auto" alt="...">
+                            </div>
+                            <div class="card-body text-center pt-0">
+                                <div class="py-2 star-pulse">
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                </div>
+                                <h3 class="card-title font-weight-bold">Plan Mensual</h3>
+                                <p class="card-text">
+                                    Con el plan mensual usted podrá adquirir un abono que cubra un número específico de viajes que esten estipulados previamente, es decir que ya tengan un origen y un destino establecidos. Es ideal para traslados a obligaciones diarias como trabajo, escuela, etc.
+                                    No dude en consultar!
+                                </p>
+                                <hr>
+                                <h4 class="fw-bold">{{producto.nombre}} Precio: {{producto.precio}} </h4>
+                                <label for="cantidad">Cantidad de abonos (1-10):</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+                                <div class="mt-5"  width=100% height=100%>
+                                    <a [routerLink]="'/LogIn'">
+                                        <button type="button" class="btn btn-primary">Comprar ahora</button>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="card shadow mt-4 mt-sm-0">
+                            <div class="pt-3 m-auto">
+                                <img src="../../../assets/Okok.jpg" width="90" height="90" class="avatar-md circle m-auto" alt="...">
+                            </div>
+                            <div class="card-body text-center pt-0">
+                                <div class="py-2 star-pulse-2">
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                </div>
+                                <h3 class="card-title font-weight-bold">Plan abono libre</h3>
+                                <p class="card-text">
+                                    Barajando la posibilidad de que necesite hacer viajes durante el mes, pero no sepa la cantidad de viajes que necesitara o si su destino varía según cada viaje le presentamos el abono libre, donde usted podra hacer hasta 30 viajes mensuales sin importar el destino, es decir que los viajes que efectúe serian con kilometros libre.
+                                </p>
+                                <hr>
+                                <h4 class="fw-bold">{{producto.nombre}} Precio: {{producto.precio}} </h4>
+                                <label for="cantidad">Cantidad de abonos (1-10):</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+                                <div class="mt-5"  width=100% height=100%>
+                                    <a [routerLink]="'/LogIn'">
+                                        <button type="button" class="btn btn-primary">Comprar ahora</button>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="card shadow mt-4 mt-sm-0">
+                            <div class="pt-3 m-auto">
+                                <img src="../../../assets/Okok.jpg" width="90" height="90" class="avatar-md circle" alt="...">
+                            </div>
+                            <div class="card-body text-center pt-0">
+                                <div class="py-2 star-pulse-3">
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                    <i class="bi bi-star-fill mx-1 fs-5 text-warning"></i>
+                                </div>
+                                <h3 class="card-title font-weight-bold">Plan encomienda</h3>
+                                <p class="card-text">
+                                    Si lo que necesita es trasladar paquetes o encomiendas durante el transcurso del mes podra acceder a este plan mensual exclusivo para encomiendas donde podra enviar y recibir paquetes sin necesidad de trasladarse, ya que nuestros choferes se encargaran de cuidarlas.
+                                </p>
+                                <hr>
+                                <h4 class="fw-bold">{{producto.nombre}} Precio: {{producto.precio}} </h4>
+                                <label for="cantidad">Cantidad de abonos (1-10):</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+                                <div class="mt-5"  width=100% height=100%>
+                                    <a [routerLink]="'/LogIn'">
+                                        <button type="button" class="btn btn-primary">Comprar ahora</button>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>      
+        
+                </div>
+            </div>
+        </div>
+
+    </div>-->

@@ -25,6 +25,11 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { PerfilComponent } from './perfil/perfil.component';
+import { TiendalogComponent } from './pages/tiendalog/tienda.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CrearProductoComponent } from './pages/producto/crear-producto.component';
+import { ListaProductoComponent } from './pages/producto/lista-producto.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,11 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     DashboardComponent,
     CarritoComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    PerfilComponent,
+    TiendalogComponent,
+    ListaProductoComponent,
+    CrearProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +62,10 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     HttpClientModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+
   ],
+
   exports: [
     BrowserModule,
     AppRoutingModule,
@@ -66,6 +77,11 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     HttpClientModule
   ],
+
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })

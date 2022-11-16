@@ -1,4 +1,58 @@
 header {
+
+   background:linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+   border-radius:10px;
+   box-shadow:0px 0px 10px #000;
+   text-align:left;
+   margin-left:40px;
+   box-sizing:border-box;
+   padding-top:15px;
+     padding-bottom:10%;
+   margin:5% auto;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+ }
+
+header input {
+   width: 90%;
+   height: 30px;
+   margin: 0.5rem;
+ }
+ 
+ 
+ button {
+   height:30px;
+   width:100px;
+  /* background:#fff;
+   border:1px solid #f2f2f2; */
+   border-radius:20px;
+ /*  color: slategrey; */
+   text-transform:uppercase;
+   font-family: 'Ubuntu', sans-serif;
+   cursor:pointer;
+ }
+ 
+ 
+/* .imput [name="password"]{
+   max-width:400px;
+     width: 80%;
+   line-height:3em;
+   font-family: 'Ubuntu', sans-serif;
+   margin:1em 2em;
+   border-radius:5px;
+   border:2px solid #f2f2f2;
+   outline:none;
+   padding-left:10px;
+ 
+ }
+*/
+
+
+/*.container {
     width: 100%;
     min-height: 625px;
  }
@@ -8,12 +62,14 @@ header {
     max-width:400px;
 }
 
- .wave {
-    position: relative;
-    padding-top: 10rem;
+ .container {
+   position: relative;
+   padding-top: 10rem;
     background: url('/RemisYa/src/assets/wave.png');
-    background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+    background: linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%) no-repeat center center fixed;
  }
+
+
  
  .wave:before {
     content: '';
@@ -26,7 +82,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
  }
- /**/
+
+
 
  .flex-container {
     display: flex;
@@ -36,3 +93,4 @@ header {
     align-items: center;
     align-content: normal;
 }
+*/

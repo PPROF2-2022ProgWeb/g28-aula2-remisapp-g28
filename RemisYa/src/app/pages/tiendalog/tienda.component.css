@@ -1,0 +1,13 @@
+#tiendada {
+    background:linear-gradient(90deg, rgb(1, 94, 21) 0%, rgb(0, 236, 20) 100%);
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+}
