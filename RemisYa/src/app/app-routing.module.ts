@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'tiendalog', component: TiendalogComponent, pathMatch: 'full'}, 
   {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
   {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
-
+ 
 ];
 
 @NgModule({

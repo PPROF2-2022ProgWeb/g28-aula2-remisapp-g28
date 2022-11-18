@@ -6,7 +6,7 @@
         <div class="bootstrap-wrapper">
             <div class="text-center">
               <img
-                src="../../../../assets/planta1.jpg"
+                src="../../../../src/assets/remises.jpg"
                 alt=""
                 class="profile-img"
               />
@@ -23,6 +23,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Precio ARG$</th>
+                    <th scope="col">Actualizar</th>
                     <th scope="col">Borrar</th>
                   </tr>
                 </thead>
@@ -31,6 +32,9 @@
                     <td>{{ producto.id }}</td>
                     <td>{{ producto.nombre }}</td>
                     <td>{{ producto.precio }}</td>
+                    <td *ngIf="producto.id != undefined">
+                      <button class="btn btn-outline-danger boton" (click)="actualizar(producto.id)"><i class="far fa-trash-alt"></i> Editar </button>
+                    </td>
                     <td *ngIf="producto.id != undefined">
                       <button class="btn btn-outline-danger boton" (click)="borrar(producto.id)"><i class="far fa-trash-alt"></i> Borrar </button>
                     </td>

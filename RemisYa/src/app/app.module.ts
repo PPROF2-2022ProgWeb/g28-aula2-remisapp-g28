@@ -31,6 +31,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CrearProductoComponent } from './pages/producto/crear-producto.component';
 import { ListaProductoComponent } from './pages/producto/lista-producto.component';
 
+//Externo
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -63,6 +67,8 @@ import { ListaProductoComponent } from './pages/producto/lista-producto.componen
     HttpClientModule,
     MatCardModule,
     MatListModule,
+    NgxSpinnerModule,
+    NgxPayPalModule,
 
   ],
 
@@ -83,6 +89,7 @@ import { ListaProductoComponent } from './pages/producto/lista-producto.componen
   ],
 
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

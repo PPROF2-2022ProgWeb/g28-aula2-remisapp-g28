@@ -13,6 +13,8 @@ import Swal from 'sweetalert2';
 export class ListaProductoComponent implements OnInit {
 
   productos: Producto [] = [];
+  nombre = '';
+  precio : any ;
 
   constructor(
     private productoService: ProductoService,
@@ -21,6 +23,7 @@ export class ListaProductoComponent implements OnInit {
 
   ngOnInit() {
     this.cargarProductos();
+    
   }
 
   cargarProductos(): void {
@@ -49,7 +52,21 @@ export class ListaProductoComponent implements OnInit {
     })
   }
 
+  actualizar(id: number, ) {
+    const producto = new Producto(this.nombre, this.precio);
+    this.productoService.update(id, producto).subscribe(() => {
 
+      Swal.fire('Producto actualizado', 'Producto actualizado con exito','success');
+
+      this.cargarProductos()
+
+    }, error => {
+      console.log(error)
+
+      Swal.fire('Producto no actualizado', 'Producto no ha sido actualizado con exito','error');;
+
+    })
+  }
 
 
 }
